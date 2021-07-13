@@ -20,7 +20,7 @@ void onStart() {
   service.onDataReceived.listen((event) {});
 
   // bring to foreground
-  service.setForegroundMode(true);
+  service.setForegroundMode(true); 
   Timer.periodic(const Duration(seconds: 5), (timer) async {
     if (!(await service.isServiceRunning())) timer.cancel();
 
